@@ -37,3 +37,32 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+//++++++++++++++++++++Memory++++++++++++++++++++++++++++//
+
+//1=[stack] (primitive data types ke sath )
+//stack==yha hmme ek copy milta hai 
+//2=[Heap] (non-primitive data types ke sath)
+//Heap==yha hmme ek reference milta hai 
+
+//=========for stack====================//
+let myYoutubeName="osmfood"
+
+let anotherName = myYoutubeName;
+anotherName="chaiaurbhushan";
+console.log(anotherName);//chaiqurbhushan
+console.log(myYoutubeName)//osmfood
+//============for Heap===============//
+let userOne={
+    email:"bac@gmail.com",
+    upi:"bhushan@ybl"
+}
+console.log(userOne);
+
+let userTwo=userOne
+userTwo.email="bhushan@gmail.com"
+
+console.log(userOne.email);//bhushan@gmail.com
+console.log(userTwo.email);//bhushan@gmail.com
+
+
