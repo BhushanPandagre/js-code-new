@@ -70,3 +70,18 @@ console.log(Object.entries(user));
 // how to know specific property available or not
 console.log(user.hasOwnProperty("IsloggedIn"));
 // if available :: true
+
+//object destructuring
+
+const course = {
+  courseName: "Js in hindi ",
+  price: "999",
+  courseInstructor: "Bhushan",
+};
+
+// const {courseInstructor,price,courseName} = course;
+const { courseInstructor: instructor, price, courseName } = course;
+console.log(price);
+// console.log(courseInstructor);
+console.log(instructor);
+console.log(courseName);
