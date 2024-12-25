@@ -45,7 +45,7 @@ console.log(addTwoNumbers("")); //undefined
 
 //new use csase rest operator
 //[ 100, 200, 300, 300, 400 ] return a array
-function calculatePrice(...item1) {
+function calculatePrice(val1,val2,...item1) {
   return item1;
 }
 console.log(calculatePrice(100, 200, 300, 300, 400));
