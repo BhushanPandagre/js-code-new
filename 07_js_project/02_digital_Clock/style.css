@@ -1,0 +1,116 @@
+/* Body Styling */
+/* Navigation Bar */
+nav {
+    position: fixed; /* Fixes the nav bar to the top */
+    top: 0; /* Positions it at the very top */
+    left: 0; /* Ensures it spans the full width of the viewport */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it stays above other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Spacing between links */
+    background: linear-gradient(
+      to right,
+      #4caf50,
+      #81c784
+    ); /* Gradient background */
+    padding: 15px 30px;
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom only */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Navigation Links */
+  nav a {
+    text-decoration: none; /* Removes underline */
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth hover animation */
+  }
+  
+  /* Navigation Link Hover Effect */
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+    transform: scale(1.1); /* Enlarges slightly on hover */
+  }
+  
+  /* Active Link Styling */
+  nav a[aria-current="page"] {
+    background: white; /* White background for active link */
+    color: #4caf50; /* Matches the nav bar gradient */
+    font-weight: bold;
+    border: 2px solid #4caf50;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* Add Padding to Body for Fixed Nav */
+  body {
+    margin: 0;
+    padding-top: 70px; /* Avoid overlap of content with the fixed nav */
+  }
+  
+  /* Center Container */
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in animation */
+  }
+  
+  /* Clock Styling */
+  #clock {
+    font-size: 60px; /* Large, bold font for the clock */
+    font-weight: bold;
+    background: linear-gradient(
+      90deg,
+      #ff8c00,
+      #ffc107
+    ); /* Vibrant gradient background */
+    color: #212121;
+    padding: 30px 60px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.2); /* Glowing and subtle shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Depth for the text */
+    transition: all 0.3s ease; /* Smooth hover animation */
+    animation: glowing 2s infinite; /* Glowing effect */
+  }
+  
+  /* Hover Effect for Clock */
+  #clock:hover {
+    transform: scale(1.1); /* Slightly enlarges on hover */
+    box-shadow: 0 12px 30px rgba(255, 140, 0, 0.7), 0 6px 12px rgba(0, 0, 0, 0.3); /* More intense shadow on hover */
+    cursor: pointer;
+  }
+  
+  /* Fade-In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Starts fully transparent */
+      transform: translateY(20px); /* Starts slightly below */
+    }
+    to {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Returns to original position */
+    }
+  }
+  
+  /* Glowing Animation for the Clock */
+  @keyframes glowing {
+    0% {
+      box-shadow: 0 0 5px rgba(255, 140, 0, 0.5); /* Initial glow */
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 140, 0, 1); /* Intense glow at midpoint */
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(255, 140, 0, 0.5); /* Returns to initial glow */
+    }
+  }
+  
